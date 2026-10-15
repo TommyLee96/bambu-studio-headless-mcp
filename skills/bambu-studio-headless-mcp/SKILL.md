@@ -1,6 +1,6 @@
 ---
-name: bambu-headless
-description: Prepare and inspect print files and slice with Bambu Studio on Windows without taking over the active desktop, using a configured bambu-headless-bridge MCP server. Includes an X2D dual-nozzle assembly workflow.
+name: bambu-studio-headless-mcp
+description: "Use the Bambu Studio Headless MCP server to prepare and inspect STL/3MF models and slice with Bambu Lab Bambu Studio on Windows without taking over the active desktop. Includes X2D dual-nozzle offline validation. 拓竹 Bambu Studio 后台切片 MCP：模型准备、检查与 X2D 双喷头离线校验。"
 ---
 
 Use the configured bridge's offline tools for mesh inspection, transformations, templates and slicing. If MCP is unavailable, use `node scripts/call-tool.mjs TOOL REQUEST_JSON` from the installed repository. Read that repository's README for setup; do not assume its installation directory.

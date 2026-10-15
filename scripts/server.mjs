@@ -9,7 +9,7 @@ import { ListToolsRequestSchema, CallToolRequestSchema, McpError, ErrorCode } fr
 import { ROOT, readConfig, findStudio, offlineEnvironment } from './lib/config.mjs';
 import { filterTools, assertAllowed, forwardTool, OFFLINE_TOOLS } from './lib/bridge.mjs';
 
-const upstream = new Client({ name: 'bambu-headless-bridge', version: '0.1.0' });
+const upstream = new Client({ name: 'bambu-studio-headless-mcp', version: '0.1.0' });
 let transport;
 let closing;
 async function close() {
@@ -28,7 +28,7 @@ try {
   const listing = await upstream.listTools();
   const tools = filterTools(listing.tools);
   if (tools.length !== OFFLINE_TOOLS.length) throw new Error('Pinned upstream does not supply every required offline tool.');
-  const server = new Server({ name: 'bambu-headless-bridge', version: '0.1.0' }, { capabilities: { tools: {} } });
+  const server = new Server({ name: 'bambu-studio-headless-mcp', version: '0.1.0' }, { capabilities: { tools: {} } });
   server.setRequestHandler(ListToolsRequestSchema, async () => ({ tools }));
   server.setRequestHandler(CallToolRequestSchema, async (request, extra) => {
     try { assertAllowed(request.params.name); }

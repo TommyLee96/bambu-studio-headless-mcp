@@ -7,7 +7,7 @@ import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js'
 import { ROOT } from './lib/config.mjs';
 import { assertAllowed } from './lib/bridge.mjs';
 
-const client = new Client({ name: 'bambu-headless-cli', version: '0.1.0' });
+const client = new Client({ name: 'bambu-studio-headless-mcp-cli', version: '0.1.0' });
 try {
   const [name = '--list', file] = process.argv.slice(2);
   if (name !== '--list') assertAllowed(name);

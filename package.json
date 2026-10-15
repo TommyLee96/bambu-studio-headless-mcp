@@ -1,8 +1,9 @@
 {
-  "name": "bambu-headless-bridge",
+  "name": "bambu-studio-headless-mcp",
   "version": "0.1.0",
   "private": true,
-  "description": "Offline Bambu Studio MCP tools on an isolated Windows desktop, with X2D dual-nozzle preparation.",
+  "description": "Bambu Studio MCP server for Windows background slicing and X2D dual-nozzle validation. 拓竹 Bambu Studio 后台切片与双喷头离线校验 MCP。",
+  "keywords": ["bambu-lab", "bambulab", "bambu-studio", "mcp", "mcp-server", "model-context-protocol", "ai-agents", "headless", "windows", "3d-printing", "x2d", "dual-nozzle", "stl", "3mf", "拓竹"],
   "license": "GPL-2.0-only",
   "type": "module",
   "engines": { "node": ">=24" },

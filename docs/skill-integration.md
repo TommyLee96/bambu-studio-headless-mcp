@@ -12,7 +12,7 @@ environment. Review model licenses before using downloaded assets. External AI
 providers are optional and have their own credentials and data-sharing terms.
 This repository does not bundle or automatically install that upstream Skill.
 Its own generic agent policy is available in
-[`skills/bambu-headless/SKILL.md`](../skills/bambu-headless/SKILL.md); copy it
+[`skills/bambu-studio-headless-mcp/SKILL.md`](../skills/bambu-studio-headless-mcp/SKILL.md); copy it
 only into the Skill location supported by the chosen agent client.
 
 **中文。** [bambu-studio-ai](https://github.com/heyixuan2/bambu-studio-ai) 是可选的模型准备层，
@@ -20,7 +20,7 @@ only into the Skill location supported by the chosen agent client.
 按上游说明在独立 Python 虚拟环境安装及管理依赖，使用下载模型前检查许可证。
 外部 AI 服务是可选项，需自行配置凭据并遵守数据分享条款。
 本仓库不捆绑或自动安装上游 Skill。仓库自身的通用代理指引见
-[`skills/bambu-headless/SKILL.md`](../skills/bambu-headless/SKILL.md)，可复制到所选代理客户端支持的 Skill 目录。
+[`skills/bambu-studio-headless-mcp/SKILL.md`](../skills/bambu-studio-headless-mcp/SKILL.md)，可复制到所选代理客户端支持的 Skill 目录。
 
 ## Background-only contract / 纯后台约定
 

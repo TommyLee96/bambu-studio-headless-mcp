@@ -171,7 +171,7 @@ def build_project(template, part1, part2, output, filament1, filament2,
     settings["filament_map_mode"] = "Manual"
     model = ET.Element(f"{{{CORE}}}model", {"unit": "millimeter", "xml:lang": "en-US",
                        "xmlns:BambuStudio": "http://schemas.bambulab.com/package/2021"})
-    ET.SubElement(model, f"{{{CORE}}}metadata", {"name": "Application"}).text = "Bambu Headless Bridge"
+    ET.SubElement(model, f"{{{CORE}}}metadata", {"name": "Application"}).text = "Bambu Studio Headless MCP"
     ET.SubElement(model, f"{{{CORE}}}metadata", {"name": "BambuStudio:3mfVersion"}).text = "1"
     resources = ET.SubElement(model, f"{{{CORE}}}resources")
     build = ET.SubElement(model, f"{{{CORE}}}build")

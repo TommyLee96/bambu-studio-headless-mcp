@@ -27,7 +27,7 @@ internal static class BambuCliHidden
 
     private static void PrintWrapperHelp()
     {
-        Console.WriteLine("Bambu Headless Bridge - isolated Windows CLI launcher");
+        Console.WriteLine("Bambu Studio Headless MCP - isolated Windows CLI launcher");
         Console.WriteLine("Usage: BambuCliHidden.exe <Bambu Studio offline CLI arguments>");
         Console.WriteLine("       BambuCliHidden.exe --help-wrapper");
         Console.WriteLine("An explicit offline action is required: --help, --info, --slice, or a supported --export-* action.");

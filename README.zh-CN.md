@@ -1,8 +1,10 @@
-# Bambu Headless Bridge
+# 拓竹 Bambu Studio 后台切片 MCP
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-通过 MCP 客户端运行 Bambu Studio CLI，在处理任务时保持 Windows 鼠标、键盘和可见桌面可供正常使用。
+面向**拓竹（Bambu Lab）Bambu Studio 的非官方 Model Context Protocol（MCP，模型上下文协议）服务器**。
+AI Agent 可在 Windows 后台准备、检查 STL/3MF 模型并执行离线切片，鼠标、键盘和可见桌面仍可正常使用。
+包含 **X2D 双喷头流程**，已验证 **0.4/0.4 mm 软件配置基线**。英文项目名为 **Bambu Studio Headless MCP**。
 
 本独立项目连接两个现有工具：
 [bambu-printer-mcp](https://github.com/DMontgomery40/bambu-printer-mcp) 提供 MCP 工具和切片能力，
@@ -55,7 +57,7 @@ MCP 客户端可使用以下通用配置，将仓库占位符替换为当前电�
 ```json
 {
   "mcpServers": {
-    "bambu_background": {
+    "bambu_studio_headless_mcp": {
       "command": "node",
       "args": ["<仓库绝对路径>/scripts/server.mjs"]
     }
@@ -102,7 +104,7 @@ node scripts/call-tool.mjs slice_stl artifacts/dual.mcp.json
 
 `bambu-studio-ai` 可提供参数化模型、网格分析和预览。上游 GUI 辅助功能和基于 A1 的多色模板本身不构成 X2D 后台流程。
 请按 [通用 Skill 集成说明](docs/skill-integration.md)，将所有 Bambu CLI 执行经由隐藏启动器，并将双喷头任务交给 X2D 项目准备流程。
-可读取通用代理指引 [`skills/bambu-headless/SKILL.md`](skills/bambu-headless/SKILL.md)，或复制到支持的 Skill 目录。
+可读取通用代理指引 [`skills/bambu-studio-headless-mcp/SKILL.md`](skills/bambu-studio-headless-mcp/SKILL.md)，或复制到支持的 Skill 目录。
 仓库不捆绑或自动安装上游 Skill。
 
 ## 限制与验证

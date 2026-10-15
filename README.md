@@ -1,9 +1,12 @@
-# Bambu Headless Bridge
+# Bambu Studio Headless MCP
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-Run Bambu Studio CLI jobs from an MCP client while keeping the Windows mouse,
-keyboard and visible desktop available for other work.
+An unofficial **Model Context Protocol (MCP) server for Bambu Lab (拓竹) Bambu
+Studio on Windows**. AI agents can prepare and inspect STL/3MF files and run
+offline slicing on an isolated desktop, while the mouse, keyboard and visible
+desktop remain available for other work. Includes an **X2D dual-nozzle workflow**
+validated against the **0.4/0.4 mm software baseline**.
 
 This independent project connects two useful building blocks:
 [bambu-printer-mcp](https://github.com/DMontgomery40/bambu-printer-mcp) for MCP
@@ -82,7 +85,7 @@ repository placeholder with the absolute path on that computer:
 ```json
 {
   "mcpServers": {
-    "bambu_background": {
+    "bambu_studio_headless_mcp": {
       "command": "node",
       "args": ["<absolute repository path>/scripts/server.mjs"]
     }
@@ -145,7 +148,7 @@ workflow by themselves. Use the
 [generic Skill integration guide](docs/skill-integration.md) to keep all Bambu
 CLI execution behind the hidden launcher and route dual-nozzle jobs through the
 X2D preparation path. The generic agent instructions in
-[`skills/bambu-headless/SKILL.md`](skills/bambu-headless/SKILL.md) can be read or
+[`skills/bambu-studio-headless-mcp/SKILL.md`](skills/bambu-studio-headless-mcp/SKILL.md) can be read or
 copied into a supported Skill location. The upstream Skill is not bundled or
 automatically installed.
 

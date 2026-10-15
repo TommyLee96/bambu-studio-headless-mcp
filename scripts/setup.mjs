@@ -30,7 +30,7 @@ try {
     fs.mkdirSync(path.join(ROOT, 'config'), { recursive: true });
     fs.writeFileSync(path.join(ROOT, 'config', 'local.json'), JSON.stringify({ studioExe }, null, 2) + '\n');
     fs.mkdirSync(path.join(ROOT, 'artifacts'), { recursive: true });
-    const toml = `[mcp_servers.bambu_headless_bridge]\ncommand = ${JSON.stringify(process.execPath)}\nargs = [${JSON.stringify(path.join(ROOT, 'scripts', 'server.mjs'))}]\ncwd = ${JSON.stringify(ROOT)}\nstartup_timeout_sec = 60\ntool_timeout_sec = 300\n`;
+    const toml = `[mcp_servers.bambu_studio_headless_mcp]\ncommand = ${JSON.stringify(process.execPath)}\nargs = [${JSON.stringify(path.join(ROOT, 'scripts', 'server.mjs'))}]\ncwd = ${JSON.stringify(ROOT)}\nstartup_timeout_sec = 60\ntool_timeout_sec = 300\n`;
     fs.writeFileSync(path.join(ROOT, 'artifacts', 'codex-mcp.example.toml'), toml);
     console.log('Saved config/local.json and artifacts/codex-mcp.example.toml (both ignored).');
     console.log('Setup only writes project-local files; add the generated MCP entry to your client if desired.');
