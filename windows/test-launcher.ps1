@@ -134,3 +134,6 @@ try {
 finally {
     foreach ($key in $saved.Keys) { [Environment]::SetEnvironmentVariable($key, $saved[$key], 'Process') }
 }
+# A successful timeout assertion intentionally leaves native exit code 124.
+# Clear it only after the complete test script has returned without an error.
+$global:LASTEXITCODE = 0
