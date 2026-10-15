@@ -120,7 +120,12 @@ class BuilderTests(unittest.TestCase):
         self.assertFalse(request["arrange"])
         self.assertFalse(request["orient"])
         self.assertEqual(request["template_3mf_path"], str(self.output.resolve()))
-        self.assertEqual(request["load_filaments"], ";".join(map(str, self.profiles)))
+        actual_profiles = request["load_filaments"].split(";")
+        self.assertEqual(len(actual_profiles), len(self.profiles))
+        for actual, expected in zip(actual_profiles, self.profiles):
+            # Windows may expand a temporary-directory 8.3 alias when resolving
+            # paths. Verify the same underlying files, preserving slot order.
+            self.assertTrue(Path(actual).samefile(expected))
         with zipfile.ZipFile(self.output) as archive:
             self.assertEqual(len(archive.namelist()), 5)
             settings = json.loads(archive.read("Metadata/project_settings.config"))
